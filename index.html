@@ -1,2 +1,68 @@
-<h1 id="title">CSC 642 Summer 2020 Individual Assignment Tania Nemeth</h1>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+  <h1 id="title">CSC 642 Summer 2020 Individual Assignment Tania Nemeth</h1>
   <h1 id="title">Data Survey Form</h1>
+  <p id ="description">
+    Please fill out all fields before you submit.
+  </p>
+  <form id="survey_form">
+    <div class="form-group">
+      <label for="first_name">First Name:</label>
+      <input type="text" name="first_name" id="first_name" required>
+    </div>
+    <div class="form-group">
+      <label for="last_name">Last Name:</label>
+      <input type="text" name="last_name" id="last_name" required>
+    </div>
+    <div class="form-group">
+      <label for="address">Address:</label>
+      <input type="text" name="address" id="address" required>
+    </div>
+    <div class="form-group">
+      <label for="dob">Date of Birth:</label>
+      <input type="date" id="dob" name="dob" required>
+    </div>
+    <div class="form-group">
+      <label for="education_level">Education Level:</label>
+      <select class="form-control" id="education_level">
+        <option>High School</option>
+        <option>Some College</option>
+        <option>Bachelor's Degree</option>
+        <option>Graduate Studies</option>
+        <option>Ph.D</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="height">Height: (Ex: 5' 4")</label>
+      <input type="text" name="height" id="height" required>
+    </div>
+    <div class="form-group">
+    <label for="telephone">Telephone:</label>
+     <input type="tel" value="1-(555)-555-5555" id="telephone">
+  </div>
+  <div class="form-group">
+    <label for="Input_email">Email address:</label>
+    <input type="email" name="Input_email" id="Input_email" required>
+  </div>
+  <div class="form-group">
+    <label for="confirm_email">Confirm email:</label>
+    <input type="email" name="confirm_email" id="confirm_email" required>
+  </div>
+  <div class="form-group">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+      <label class="form-check-label" for="invalidCheck">
+        Agree to terms and conditions
+      </label>
+      <div class="invalid-feedback">
+        You must agree before submitting.
+      </div>
+    </div>
+  </div>
+<button class="btn btn-primary" type="submit">Submit form</button>
+    </form>
+  </body>
+  </html>

@@ -3,29 +3,110 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
-  <h1 id="title">CSC 642 Summer 2020 Individual Assignment Tania Nemeth</h1>
-  <h1 id="title">Data Survey Form</h1>
+  <div class="container bg-light">
+  <h3 class="text-center" id="title">CSC 642 Summer 2020 Individual Assignment Tania Nemeth</h3>
+  <h3 class="text-center" id="title">Data Survey Form</h3>
   <p id ="description">
-    Please fill out all fields before you submit.
+    Please fill out all fields marked with * before you submit.
   </p>
-  <form id="survey_form">
-    <div class="form-group">
-      <label for="first_name">First Name:</label>
-      <input type="text" name="first_name" id="first_name" required>
+  <form id="survey_form" class="text-secondary">
+<div class="form-row">
+    <div class="form-group col">
+      <label for="first_name">First Name*</label>
+      <input type="text" class ="form-control" name="first_name" id="first_name" required>
     </div>
-    <div class="form-group">
-      <label for="last_name">Last Name:</label>
-      <input type="text" name="last_name" id="last_name" required>
+    <div class="form-group col">
+      <label for="last_name">Last Name*</label>
+      <input type="text" class ="form-control" name="last_name" id="last_name" required>
     </div>
-    <div class="form-group">
-      <label for="address">Address:</label>
-      <input type="text" name="address" id="address" required>
     </div>
-    <div class="form-group">
-      <label for="dob">Date of Birth:</label>
-      <input type="date" id="dob" name="dob" required>
+    <div class="form-row">
+    <div class="form-group col-md-5">
+      <label for="address">Address*</label>
+      <input type="text" class ="form-control text-secondary" name="address" id="address" required>
     </div>
-    <div class="form-group">
+    <div class="form-group col-md-4">
+      <label for="city">City*</label>
+      <input type="text" class ="form-control" name="city" id="city" required>
+    </div>
+    <div class="form-group col-md-1">
+      <label for="state">State*</label>
+      <select class="form-control" id="state" name="state">
+      <option value="AK">AK</option>
+      <option value="AL">AL</option>
+      <option value="AR">AR</option>
+      <option value="AZ">AZ</option>
+      <option value="CA">CA</option>
+      <option value="CO">CO</option>
+      <option value="CT">CT</option>
+      <option value="DC">DC</option>
+      <option value="DE">DE</option>
+      <option value="FL">FL</option>
+      <option value="GA">GA</option>
+      <option value="HI">HI</option>
+      <option value="IA">IA</option>
+      <option value="ID">ID</option>
+      <option value="IL">IL</option>
+      <option value="IN">IN</option>
+      <option value="KS">KS</option>
+      <option value="KY">KY</option>
+      <option value="LA">LA</option>
+      <option value="MA">MA</option>
+      <option value="MD">MD</option>
+      <option value="ME">ME</option>
+      <option value="MI">MI</option>
+      <option value="MN">MN</option>
+      <option value="MO">MO</option>
+      <option value="MS">MS</option>
+      <option value="MT">MT</option>
+      <option value="NC">NC</option>
+      <option value="ND">ND</option>
+      <option value="NE">NE</option>
+      <option value="NH">NH</option>
+      <option value="NJ">NJ</option>
+      <option value="NM">NM</option>
+      <option value="NV">NV</option>
+      <option value="NY">NY</option>
+      <option value="OH">OH</option>
+      <option value="OK">OK</option>
+      <option value="OR">OR</option>
+      <option value="PA">PA</option>
+      <option value="PR">PR</option>
+      <option value="RI">RI</option>
+      <option value="SC">SC</option>
+      <option value="SD">SD</option>
+      <option value="TN">TN</option>
+      <option value="TX">TX</option>
+      <option value="UT">UT</option>
+      <option value="VA">VA</option>
+      <option value="VT">VT</option>
+      <option value="WA">WA</option>
+      <option value="WI">WI</option>
+      <option value="WV">WV</option>
+      <option value="WY">WY</option>
+  </select>
+    </div>
+    <div class="form-group col-md-2">
+      <label for="zip_code">Zipcode*</label>
+      <input type="text" class ="form-control" name="zip_code" id="zip_code" required>
+    </div>
+    </div>
+    <div class="form-row">
+    <div class="form-group col">
+      <label for="dob">Date of Birth*</label>
+      <input type="date" class ="form-control" id="dob" name="dob" required>
+    </div>
+    <div class="form-group col">
+    <label for="telephone">Telephone*</label>
+     <input type="tel" class ="form-control" value="(555)-555-5555" id="telephone">
+  </div>
+    </div>
+    <div class="form-row">
+    <div class="form-group col-md-3">
+      <label for="height">Height: (Ex: 5' 4")</label>
+      <input type="text" class ="form-control" name="height" id="height" required>
+    </div>
+    <div class="form-group col-md-3">
       <label for="education_level">Education Level:</label>
       <select class="form-control" id="education_level">
         <option>High School</option>
@@ -35,21 +116,17 @@
         <option>Ph.D</option>
       </select>
     </div>
-    <div class="form-group">
-      <label for="height">Height: (Ex: 5' 4")</label>
-      <input type="text" name="height" id="height" required>
-    </div>
-    <div class="form-group">
-    <label for="telephone">Telephone:</label>
-     <input type="tel" value="1-(555)-555-5555" id="telephone">
+      </div>
+
+  <div class="form-row">
+  <div class="form-group col">
+    <label for="Input_email">Email address*</label>
+    <input type="email" class ="form-control" value="your@email.com" name="Input_email" id="Input_email" required>
   </div>
-  <div class="form-group">
-    <label for="Input_email">Email address:</label>
-    <input type="email" name="Input_email" id="Input_email" required>
+  <div class="form-group col">
+    <label for="confirm_email">Confirm email*</label>
+    <input type="email" class ="form-control" name="confirm_email" id="confirm_email" required>
   </div>
-  <div class="form-group">
-    <label for="confirm_email">Confirm email:</label>
-    <input type="email" name="confirm_email" id="confirm_email" required>
   </div>
   <div class="form-group">
     <div class="form-check">
@@ -64,5 +141,6 @@
   </div>
 <button class="btn btn-primary" type="submit">Submit form</button>
     </form>
+    </div>
   </body>
   </html>

@@ -1,9 +1,17 @@
 <html lang="en">
 <head>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-P74cfRDQYyGpjE7t7n-T8pTHJR-bEhc"
+      defer
+    ></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="script.js" charset="utf-8"></script>
 </head>
 <body>
-  <div class="container bg-light">
+  <div class="container bg-light" id="form_container">
   <h3 class="text-center" id="title">CSC 642 Summer 2020 Individual Assignment Tania Nemeth</h3>
   <h3 class="text-center" id="title">Data Survey Form</h3>
   <p id ="description">
@@ -21,13 +29,9 @@
     </div>
     </div>
     <div class="form-row">
-    <div class="form-group col-md-5">
+    <div class="form-group col-md-9">
       <label for="address">Address*</label>
       <input type="text" class ="form-control text-secondary" name="address" maxlength="40" id="address" required>
-    </div>
-    <div class="form-group col-md-4">
-      <label for="city">City*</label>
-      <input type="text" class ="form-control" name="city" maxlength="40" id="city" required>
     </div>
     <div class="form-group col-md-1">
       <label for="state">State*</label>
@@ -98,18 +102,18 @@
     </div>
     <div class="form-group col">
     <label for="telephone">Telephone*</label>
-     <input type="tel" class ="form-control" value="(555)-555-5555" pattern="^\d{10}$" title="please enter at least 7 and a maximum of 10 positive digits"id="telephone">
+     <input type="text" class ="form-control" value="555-555-5555" pattern="^(\+0?1\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$" title="please enter at least 7 and a maximum of 10 positive digits" id="telephone" name="telephone">
      <!-- [789][0-9]{9} other possible pattern for telephone -->
   </div>
     </div>
     <div class="form-row">
     <div class="form-group col-md-3">
       <label for="height">Height: (Ex: 5' 4")</label>
-      <input type="text" class ="form-control" name="height" id="height">
+      <input type="text" class ="form-control" name="height" id="height" name="heigh">
     </div>
     <div class="form-group col-md-3">
       <label for="education_level">Education Level:</label>
-      <select class="form-control" id="education_level">
+      <select class="form-control" id="education_level" name="education_level">
         <option>High School</option>
         <option>Some College</option>
         <option>Bachelor's Degree</option>
@@ -143,5 +147,21 @@
 <button class="btn btn-primary" type="submit">Submit form</button>
     </form>
     </div>
+    <div class="container bg-light d-none" id="results_container">
+      <h3 class="text-center" id="title">Results Verification Page Tania Nemeth</h3>
+      <h5 class="text-center" id="title">Please verify all information displayed on this page is correct</h5>
+        <div id='name_display'></div>
+        <div id="lastname_display"></div>
+        <div id='dob_display'></div>
+        <div id='phone_display'></div>
+        <div id ='email_display'></div>
+        <div id='education_display'></div>
+        <div id='height_display'></div>
+        <div id='address_display'></div>
+        <div id="map" style='height: 400px;'></div>
+        <button class="btn btn-primary" type="confirm">Confirm data submission</button>
+
+      </div>
+
   </body>
   </html>

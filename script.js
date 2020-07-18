@@ -11,13 +11,17 @@ $( document ).ready(function() {
     for (let input of data_array) {
       form_data[input.name] = input.value;
     }
-  
+
     $('#name_display').text(form_data['first_name'] + ' ' + form_data['last_name']);
     $('#dob_display').text(form_data['dob']);
     $('#phone_display').text(form_data['telephone']);
-    $('#education_display').text("Education Level:" + ' ' + form_data['education_level']);
-    $('#height_display').text("Height:" + ' ' + form_data['height']);
-    console.log(form_data);
+    if (form_data['education_level'] != '') {
+      $('#education_display').text("Education Level:" + ' ' + form_data['education_level']);
+    }
+    if(form_data['height']!= ''){
+      $('#height_display').text("Height:" + ' ' + form_data['height']);
+    }
+
     $('#email_display').text(form_data['confirm_email']);
 
     const geocode_address = "https://maps.googleapis.com/maps/api/geocode/json?address=" + encodeURIComponent(form_data['address']) + "&key=AIzaSyC-P74cfRDQYyGpjE7t7n-T8pTHJR-bEhc";
@@ -40,4 +44,14 @@ $( document ).ready(function() {
     results_container.removeClass('d-none');
     form_container.addClass('d-none');
   });
+
+  $('#confirm_button').click(function(event) {
+    results_container.addClass('d-none');
+    $('#thanks_container').removeClass('d-none');
+  })
+
 });
+
+function onSubmit(token) {
+  document.getElementById("survey_form").submit();
+}

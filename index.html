@@ -8,6 +8,7 @@
       defer
     ></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <script src="https://www.google.com/recaptcha/api.js"></script>
   <script src="script.js" charset="utf-8"></script>
 </head>
 <body>
@@ -114,6 +115,7 @@
     <div class="form-group col-md-3">
       <label for="education_level">Education Level:</label>
       <select class="form-control" id="education_level" name="education_level">
+        <option></option>
         <option>High School</option>
         <option>Some College</option>
         <option>Bachelor's Degree</option>
@@ -144,7 +146,10 @@
       </div>
     </div>
   </div>
-<button class="btn btn-primary" type="submit">Submit form</button>
+  <button class="g-recaptcha"
+          data-sitekey="6Ldmx7IZAAAAABGHo2f6f5CQQci1NsV2RjqDFUuI"
+          data-callback='onSubmit'
+          data-action='submit'>Submit</button>
     </form>
     </div>
     <div class="container bg-light d-none" id="results_container">
@@ -159,9 +164,12 @@
         <div id='height_display'></div>
         <div id='address_display'></div>
         <div id="map" style='height: 400px;'></div>
-        <button class="btn btn-primary" type="confirm">Confirm data submission</button>
+        <button class="btn btn-primary" id="confirm_button">Confirm data submission</button>
 
       </div>
+      <div class="container bg-light d-none" id="thanks_container">
+        <h3 class="text-center" id="title">Thank you for participating in the survey!</h3>
+        </div>
 
   </body>
   </html>

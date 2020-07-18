@@ -51,7 +51,3 @@ $( document ).ready(function() {
   })
 
 });
-
-function onSubmit(token) {
-  document.getElementById("survey_form").submit();
-}

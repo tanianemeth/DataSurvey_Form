@@ -12,7 +12,7 @@
   <script src="script.js" charset="utf-8"></script>
   <script>
   function onSubmit(token) {
-    document.getElementById("survey_form").submit();
+    document.getElementById("real_submit_button").click();
   }
 </script>
 </head>
@@ -155,6 +155,7 @@
           data-sitekey="6Ldmx7IZAAAAABGHo2f6f5CQQci1NsV2RjqDFUuI"
           data-callback='onSubmit'
           data-action='submit'>Submit</button>
+    <button type="submit" id="real_submit_button" style="display: none;"></button>
     </form>
     </div>
     <div class="container bg-light d-none" id="results_container">

@@ -14,7 +14,7 @@ $( document ).ready(function() {
 
     $('#name_display').text(form_data['first_name'] + ' ' + form_data['last_name']);
     $('#dob_display').text(form_data['dob']);
-    $('#phone_display').text(form_data['telephone']);
+    $('#phone_display').text("Telephone: " + ' ' + form_data['telephone']);
     if (form_data['education_level'] != '') {
       $('#education_display').text("Education Level:" + ' ' + form_data['education_level']);
     }
